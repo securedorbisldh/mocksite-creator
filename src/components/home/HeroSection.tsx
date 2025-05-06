@@ -1,8 +1,8 @@
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[80vh] flex items-center px-6 py-12 bg-gradient-to-br from-white to-red-50">
-      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div className="min-h-[80vh] flex items-center py-12 bg-gradient-to-br from-white to-red-50">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-5xl font-bold mb-6">
             Secret weapon for <span className="text-red-600">greatest creators</span> in the world

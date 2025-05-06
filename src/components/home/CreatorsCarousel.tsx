@@ -66,11 +66,9 @@ const CreatorsCarousel = () => {
               ))}
             </CarouselContent>
             
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2" />
+            <CarouselPrevious className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white" />
+            <CarouselNext className="absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white" />
           </Carousel>
-          
-          <p className="text-center text-2xl mt-8 font-bold">(slide from right to left)</p>
         </div>
       </div>
     </div>

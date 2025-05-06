@@ -7,8 +7,12 @@ const Navbar = () => {
     <div className="w-full">
       {/* Top hiring banner with curved bottom */}
       <div className="bg-red-700 text-white py-2 text-center relative">
-        <div className="container mx-auto">
+        <div className="container mx-auto flex justify-between items-center px-6">
+          <div></div> {/* Empty div for flex spacing */}
           <p className="font-medium">We're Hiring! Apply Now</p>
+          <Link to="/contact" className="text-white hover:text-gray-200 transition-colors text-sm">
+            Get in touch →
+          </Link>
         </div>
         <div className="absolute -bottom-8 w-full overflow-hidden">
           <div className="h-8 bg-white rounded-tl-full rounded-tr-full transform scale-110"></div>
@@ -16,12 +20,12 @@ const Navbar = () => {
       </div>
       
       {/* Main navigation */}
-      <nav className="w-full px-6 py-4 flex items-center justify-between bg-white pt-10">
+      <nav className="w-full container mx-auto px-6 py-4 flex items-center justify-between bg-white pt-10">
         <Link to="/" className="flex items-center">
           <img 
             src="https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/logo%20rbm.png" 
             alt="RightBox Media" 
-            className="h-12" 
+            className="h-16" 
           />
         </Link>
         
