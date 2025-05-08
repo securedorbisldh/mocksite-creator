@@ -6,21 +6,11 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
   return (
     <footer className="bg-white">
       {showBanner && (
-        <div className="bg-red-700 text-white py-16 relative overflow-hidden">
-          <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-8 md:mb-0">
-              <h2 className="text-3xl md:text-4xl mb-6 max-w-xl">
-                Connect with our experts to accelerate your content growth like never before
-              </h2>
-            </div>
-            <Link to="/contact" className="px-8 py-3 bg-white text-red-700 rounded-full text-lg hover:bg-gray-100 transition-colors flex items-center">
-              Get free consultation →
-            </Link>
-          </div>
+        <div className="py-16 relative overflow-hidden">
           <img 
             src={bannerImage}
-            alt="Hand icon"
-            className="absolute right-10 bottom-0 h-24 md:h-32 object-contain"
+            alt="Footer banner"
+            className="w-full object-cover"
           />
         </div>
       )}

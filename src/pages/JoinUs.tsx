@@ -3,6 +3,8 @@ import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 
 const JoinUs = () => {
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfq8kc6YZbMB329jwU5bpF5s6O25N-FQFUu791AmjBi9mk1cA/viewform?usp=header";
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -15,12 +17,17 @@ const JoinUs = () => {
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           <div>
             <h2 className="text-2xl font-bold text-red-700 mb-6">Graphics Team</h2>
-            <div className="p-6 bg-white rounded-full shadow-lg mb-4 inline-block">
+            <a 
+              href={googleFormUrl}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-6 bg-white rounded-full shadow-lg mb-4 inline-block hover:shadow-xl transition-shadow"
+            >
               <div>
                 <p className="font-semibold text-lg">Graphic Designer</p>
                 <p className="text-sm text-gray-600">Mohali | Minimum 1 year | Full time</p>
               </div>
-            </div>
+            </a>
             
             <div className="mt-20">
               <img 
@@ -34,18 +41,33 @@ const JoinUs = () => {
           <div>
             <h2 className="text-2xl font-bold text-red-700 mb-6">Long Term Youtube Video</h2>
             <div className="space-y-4">
-              <div className="p-6 bg-white rounded-full shadow-lg">
+              <a 
+                href={googleFormUrl}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block p-6 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <p className="font-semibold text-lg">Youtube manager</p>
                 <p className="text-sm text-gray-600">Mohali | 0 | Full time</p>
-              </div>
-              <div className="p-6 bg-white rounded-full shadow-lg">
+              </a>
+              <a 
+                href={googleFormUrl}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block p-6 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <p className="font-semibold text-lg">Video editor</p>
                 <p className="text-sm text-gray-600">Mohali | Minimum 1 year | Full time</p>
-              </div>
-              <div className="p-6 bg-white rounded-full shadow-lg">
+              </a>
+              <a 
+                href={googleFormUrl}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block p-6 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <p className="font-semibold text-lg">Motion graphics artist</p>
                 <p className="text-sm text-gray-600">Mohali | Minimum 1 year | Full time</p>
-              </div>
+              </a>
             </div>
             
             <div className="mt-8">
