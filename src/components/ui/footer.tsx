@@ -7,11 +7,13 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
     <footer className="bg-white">
       {showBanner && (
         <div className="py-16 relative overflow-hidden">
-          <img 
-            src={bannerImage}
-            alt="Footer banner"
-            className="w-full object-cover"
-          />
+          <Link to="/contact">
+            <img 
+              src={bannerImage}
+              alt="Footer banner"
+              className="w-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
+            />
+          </Link>
         </div>
       )}
       

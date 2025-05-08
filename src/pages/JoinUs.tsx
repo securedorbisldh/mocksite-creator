@@ -31,7 +31,7 @@ const JoinUs = () => {
             
             <div className="mt-20">
               <img 
-                src="/lovable-uploads/f2eea550-e899-4f05-8796-3431c0cbe79f.png" 
+                src="/lovable-uploads/c8e4af8c-78f5-4fac-b445-da7e1ca47762.png" 
                 alt="Team illustration" 
                 className="w-full max-w-xs mx-auto"
               />
@@ -72,7 +72,7 @@ const JoinUs = () => {
             
             <div className="mt-8">
               <img 
-                src="/lovable-uploads/6ca3d48f-1e50-4538-8be4-39b3686f050d.png" 
+                src="/lovable-uploads/5f59a522-25bd-4811-b934-0a8c93db728a.png" 
                 alt="Team collaboration" 
                 className="w-full max-w-sm mx-auto"
               />

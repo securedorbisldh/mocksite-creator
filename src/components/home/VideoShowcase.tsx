@@ -80,8 +80,6 @@ const VideoShowcase = () => {
           <CarouselNext className="hidden md:flex" />
         </Carousel>
         
-        <p className="text-center text-2xl mt-12 font-bold">(slide from right to left)</p>
-        
         {/* Video Modal */}
         {activeVideo && (
           <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4" onClick={() => setActiveVideo(null)}>
