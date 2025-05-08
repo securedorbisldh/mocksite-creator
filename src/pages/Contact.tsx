@@ -2,13 +2,24 @@
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import { useState } from "react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     channelLink: "",
     query: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({
+    type: null,
+    message: ""
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -16,17 +27,77 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would typically send the data to a server
-    alert("Form submitted successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      channelLink: "",
-      query: ""
-    });
+    setIsSubmitting(true);
+    setFormStatus({ type: null, message: "" });
+
+    try {
+      // This is where we'll integrate with Brevo API
+      const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": "YOUR_BREVO_API_KEY", // This should be replaced with your actual API key
+        },
+        body: JSON.stringify({
+          sender: {
+            name: "Contact Form",
+            email: "noreply@yourwebsite.com" // Replace with your sender email configured in Brevo
+          },
+          to: [
+            {
+              email: "youremail@example.com", // Replace with your email where you want to receive form submissions
+              name: "Your Name"
+            }
+          ],
+          subject: "New Contact Form Submission",
+          htmlContent: `
+            <h1>New Contact Form Submission</h1>
+            <p><strong>Name:</strong> ${formData.name}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Channel Link:</strong> ${formData.channelLink}</p>
+            <p><strong>Query:</strong> ${formData.query}</p>
+          `
+        })
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Form submitted successfully",
+          description: "We will get back to you soon!",
+          duration: 5000,
+        });
+        setFormStatus({
+          type: "success",
+          message: "Form submitted successfully. We'll get back to you soon!"
+        });
+        // Clear form after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          channelLink: "",
+          query: ""
+        });
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to submit the form. Please try again later.",
+        variant: "destructive",
+        duration: 5000,
+      });
+      setFormStatus({
+        type: "error",
+        message: "Failed to submit the form. Please try again later."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -34,6 +105,12 @@ const Contact = () => {
       <Navbar />
       <div className="container mx-auto px-6 py-12">
         <h1 className="text-4xl font-bold mb-4">Book a Free <span className="text-red-600">Consultation</span></h1>
+        
+        {formStatus.type && (
+          <Alert variant={formStatus.type === "error" ? "destructive" : "default"} className="mb-6">
+            <AlertDescription>{formStatus.message}</AlertDescription>
+          </Alert>
+        )}
         
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           <div>
@@ -63,7 +140,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-red-600"
               />
             </div>
             <div>
@@ -74,7 +151,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-red-600"
               />
             </div>
             <div>
@@ -85,7 +162,7 @@ const Contact = () => {
                 value={formData.channelLink}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-red-600"
               />
             </div>
             <div>
@@ -96,11 +173,15 @@ const Contact = () => {
                 value={formData.query}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-lg"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600 focus:border-red-600"
               />
             </div>
-            <button type="submit" className="w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
-              Submit
+            <button 
+              type="submit" 
+              className="w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
         </div>
