@@ -46,8 +46,8 @@ const Contact = () => {
           },
           to: [
             {
-              email: "info@rightmediabox.com",
-              name: "Right Media Box"
+              email: "laganvyas66@gmail.com",
+              name: "Lagan Vyas"
             }
           ],
           subject: "New Contact Form Submission",
