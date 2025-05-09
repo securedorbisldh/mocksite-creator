@@ -39,13 +39,19 @@ const Contact = () => {
       
       const requestBody = {
         sender: {
-          name: "Contact Form",
-          email: "info@rightmediabox.com"
+          name: "Right Box Media",
+          email: "lagan@rightboxmedia.com" // Updated sender email
         },
         to: [
           {
             email: "laganvyas66@gmail.com",
             name: "Lagan Vyas"
+          }
+        ],
+        cc: [
+          {
+            email: "info@rightmediabox.com",
+            name: "Right Media Box Info"
           }
         ],
         subject: "New Contact Form Submission",
@@ -140,8 +146,8 @@ const Contact = () => {
               <p>Mon - Sat</p>
             </div>
             
-            <a href="mailto:info@rightmediabox.com" className="text-red-600 hover:underline block mb-4">
-              info@rightmediabox.com
+            <a href="mailto:lagan@rightboxmedia.com" className="text-red-600 hover:underline block mb-4">
+              lagan@rightboxmedia.com
             </a>
             <p className="mt-4 text-gray-600 font-medium text-red-600">Trusted by global creators.</p>
           </div>
