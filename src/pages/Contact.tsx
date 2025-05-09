@@ -33,22 +33,21 @@ const Contact = () => {
     setFormStatus({ type: null, message: "" });
 
     try {
-      // This is where we'll integrate with Brevo API
       const response = await fetch("https://api.brevo.com/v3/smtp/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "api-key": "YOUR_BREVO_API_KEY", // This should be replaced with your actual API key
+          "api-key": "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",
         },
         body: JSON.stringify({
           sender: {
             name: "Contact Form",
-            email: "noreply@yourwebsite.com" // Replace with your sender email configured in Brevo
+            email: "info@rightmediabox.com"
           },
           to: [
             {
-              email: "youremail@example.com", // Replace with your email where you want to receive form submissions
-              name: "Your Name"
+              email: "info@rightmediabox.com",
+              name: "Right Media Box"
             }
           ],
           subject: "New Contact Form Submission",
@@ -125,8 +124,8 @@ const Contact = () => {
               <p>Mon - Sat</p>
             </div>
             
-            <a href="mailto:laganvyas66@gmail.com" className="text-red-600 hover:underline block mb-4">
-              laganvyas66@gmail.com
+            <a href="mailto:info@rightmediabox.com" className="text-red-600 hover:underline block mb-4">
+              info@rightmediabox.com
             </a>
             <p className="mt-4 text-gray-600 font-medium text-red-600">Trusted by global creators.</p>
           </div>
