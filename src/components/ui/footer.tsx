@@ -38,9 +38,23 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
         <hr className="border-gray-200 my-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 italic mb-4 md:mb-0">
-            RightBox is where creators go for next-level post and design — made in India, seen worldwide.
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-gray-600 italic mb-4 md:mb-0">
+              RightBox is where creators go for next-level post and design — made in India, seen worldwide.
+            </p>
+            <p className="text-sm text-gray-500">
+              <span>Managed and Hosted on </span>
+              <a 
+                href="https://kloudbean.com" 
+                target="_blank" 
+                rel="dofollow"
+                className="font-medium hover:text-red-600 transition-colors"
+              >
+                kloudbean
+              </a>
+              <span> with love</span>
+            </p>
+          </div>
           
           <div className="flex items-center gap-4">
             <a 
