@@ -50,16 +50,16 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
               RightBox is where creators go for next-level post and design — made in India, seen worldwide.
             </p>
             <p className="text-sm text-gray-500">
-              <span>Managed and Hosted on </span>
+              <span>Proudly powered by </span>
               <a 
                 href="https://kloudbean.com" 
                 target="_blank" 
                 rel="dofollow"
-                className="font-medium hover:text-red-600 transition-colors"
+                className="font-medium text-red-600 hover:underline transition-colors"
               >
                 kloudbean
               </a>
-              <span> with love</span>
+              <span> ❤️</span>
             </p>
           </div>
           
