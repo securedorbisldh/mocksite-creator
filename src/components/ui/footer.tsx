@@ -35,7 +35,14 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
           </div>
         </div>
         
-        <hr className="border-gray-200 my-8" />
+        <div className="relative my-8">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-white px-4 text-sm text-gray-400">RightBox Media</span>
+          </div>
+        </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col gap-2">
@@ -56,7 +63,7 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
             </p>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 mt-6 md:mt-0">
             <a 
               href="https://www.instagram.com/team.rightbox?igsh=MWEyZm12ZzE2cnYxcQ%3D%3D&utm_source=qr" 
               target="_blank"
