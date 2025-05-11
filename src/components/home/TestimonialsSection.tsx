@@ -8,7 +8,7 @@ const testimonials = [
   {
     name: "Atul Rawat",
     quote: "RightBox is blessing for me",
-    image: "/lovable-uploads/774babe5-5cc3-4fe4-9611-f33eb1eee0b5.png"
+    image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/All%20Rounder%20Boy%20ASR.png"
   },
   {
     name: "Amaan Nagani",
