@@ -1,3 +1,4 @@
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const creators = [
@@ -34,7 +35,7 @@ const CreatorsCarousel = () => {
         <div className="relative">
           <Carousel 
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
             className="w-full"
