@@ -1,4 +1,3 @@
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const creators = [
@@ -13,12 +12,6 @@ const creators = [
     title: "",
     image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/All%20Rounder%20Boy%20ASR.png",
     youtubeLink: "https://www.youtube.com/@allrounderboyasr"
-  },
-  {
-    name: "Amaan Parkar",
-    title: "",
-    image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/Amaan%20Parkar.png",
-    youtubeLink: "https://www.youtube.com/@amaaanparkar"
   },
   {
     name: "Amaan Nagani",

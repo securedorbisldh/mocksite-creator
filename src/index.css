@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Tawk.to chat widget positioning */
+#tawkchat-container {
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 1000 !important;
+}
+
+/* Adjust Tawk.to widget to not overlap with footer social icons */
+@media (max-width: 768px) {
+  #tawkchat-container {
+    bottom: 80px !important;
+  }
+}
+
+/* Ensure social icons in footer have proper z-index */
+footer .flex.items-center.gap-4 {
+  position: relative;
+  z-index: 10;
 }
