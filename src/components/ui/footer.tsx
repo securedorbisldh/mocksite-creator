@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/footer%20banner%20image-01.png" }) => {
   return (
@@ -79,6 +79,15 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
               className="text-gray-700 hover:text-red-600"
             >
               <Linkedin size={24} />
+            </a>
+            <a 
+              href="https://rightboxmedia.slack.com/archives/C08U4BLCAJE" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-red-600"
+              title="Join our Slack community"
+            >
+              <MessageCircle size={24} />
             </a>
           </div>
         </div>

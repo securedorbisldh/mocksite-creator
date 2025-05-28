@@ -1,11 +1,6 @@
 
 const testimonials = [
   {
-    name: "Amaan Parkar",
-    quote: "It was my best decision to take your service",
-    image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/Amaan%20Parkar.png"
-  },
-  {
     name: "Atul Rawat",
     quote: "RightBox is blessing for me",
     image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/All%20Rounder%20Boy%20ASR.png"
