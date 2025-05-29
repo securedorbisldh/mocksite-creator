@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, MessageCircle, Users, ExternalLink } from "lucide-react";
 
@@ -6,12 +5,12 @@ const Footer = ({ showBanner = true, bannerImage = "https://pub-9b308ad05d60480d
   return (
     <footer className="bg-white relative z-10">
       {showBanner && (
-        <div className="py-16 relative overflow-hidden">
+        <div className="py-16 relative overflow-hidden px-6 md:px-12 lg:px-16">
           <Link to="/contact">
             <img 
               src={bannerImage}
               alt="Footer banner"
-              className="w-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
+              className="w-full object-cover cursor-pointer hover:opacity-95 transition-opacity rounded-lg"
             />
           </Link>
         </div>
