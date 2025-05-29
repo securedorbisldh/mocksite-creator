@@ -11,6 +11,7 @@ import JoinUs from "./pages/JoinUs";
 import Contact from "./pages/Contact";
 import KloudBeanPartnership from "./pages/KloudBeanPartnership";
 import NotFound from "./pages/NotFound";
+import SitemapGenerator from "./components/SitemapGenerator";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/kloudbean-partnership" element={<KloudBeanPartnership />} />
+          <Route path="/generate-sitemap" element={<SitemapGenerator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
