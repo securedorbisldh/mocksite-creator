@@ -4,6 +4,7 @@ import ServicesSection from "@/components/home/ServicesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CreatorsCarousel from "@/components/home/CreatorsCarousel";
 import VideoShowcase from "@/components/home/VideoShowcase";
+import CreatorEquitySection from "@/components/home/CreatorEquitySection";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 
@@ -20,6 +21,7 @@ const Index = () => {
         <VideoShowcase />
         <TestimonialsSection />
       </div>
+      <CreatorEquitySection />
       <Footer />
     </div>
   );

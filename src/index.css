@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -86,17 +85,17 @@
   }
 }
 
-/* Improved Tawk.to chat widget positioning with better mobile responsiveness */
+/* Enhanced Tawk.to chat widget positioning with better mobile responsiveness and z-index management */
 #tawkchat-container {
   bottom: 20px !important;
   right: 20px !important;
-  z-index: 1000 !important;
+  z-index: 999 !important; /* Lower than footer social icons */
 }
 
-/* Enhanced mobile positioning to avoid social icons */
+/* Enhanced mobile positioning to avoid social icons and footer content */
 @media (max-width: 768px) {
   #tawkchat-container {
-    bottom: 100px !important;
+    bottom: 140px !important; /* Increased spacing to avoid footer content */
     right: 15px !important;
   }
 }
@@ -104,22 +103,26 @@
 /* Very small screens (phones in portrait) */
 @media (max-width: 480px) {
   #tawkchat-container {
-    bottom: 120px !important;
+    bottom: 160px !important; /* Even more spacing for smaller screens */
     right: 10px !important;
   }
 }
 
-/* Ensure social icons in footer have proper z-index and spacing */
-footer .flex.items-center.gap-4 {
+/* Ensure footer and social elements have proper z-index hierarchy */
+footer {
   position: relative;
-  z-index: 10;
-  margin-bottom: 20px;
+  z-index: 1000 !important; /* Higher than chat widget */
 }
 
-/* Additional mobile optimization */
+footer .flex.items-center.gap-3 {
+  position: relative;
+  z-index: 1001 !important; /* Highest priority for footer social links */
+}
+
+/* Additional mobile optimization for footer spacing */
 @media (max-width: 640px) {
-  footer .flex.items-center.gap-4 {
-    margin-bottom: 30px;
+  footer {
+    padding-bottom: 120px; /* Extra padding to ensure chat widget doesn't overlap */
   }
 }
 

@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import JoinUs from "./pages/JoinUs";
 import Contact from "./pages/Contact";
+import KloudBeanPartnership from "./pages/KloudBeanPartnership";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/kloudbean-partnership" element={<KloudBeanPartnership />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
