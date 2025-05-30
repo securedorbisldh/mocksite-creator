@@ -21,36 +21,6 @@ const creators = [
     title: "Finance & Investment",
     image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/C4OUR.png",
     youtubeLink: "https://www.youtube.com/@c4ourfin"
-  },
-  {
-    name: "Tech Burner",
-    title: "Technology Reviews",
-    image: "https://yt3.googleusercontent.com/ytc/AIdro_mNH5O8-RHKegRGZhLO_5FXnZ8aL0LKGbHONP_C=s176-c-k-c0x00ffffff-no-rj",
-    youtubeLink: "https://www.youtube.com/@TechBurner"
-  },
-  {
-    name: "CarryMinati",
-    title: "Gaming & Entertainment",
-    image: "https://yt3.googleusercontent.com/ytc/AIdro_kGRMaHlHrr7sP8q1y5M3TK7dFv7LR5tE6LKo_g=s176-c-k-c0x00ffffff-no-rj",
-    youtubeLink: "https://www.youtube.com/@CarryMinati"
-  },
-  {
-    name: "Ashish Chanchlani",
-    title: "Comedy Content Creator",
-    image: "https://yt3.googleusercontent.com/ytc/AIdro_nbQ5t6tOx-sWl3D1sZz5GiBHQS8K7VtCWpD8GbUQ=s176-c-k-c0x00ffffff-no-rj",
-    youtubeLink: "https://www.youtube.com/@AshishChanchlani"
-  },
-  {
-    name: "Technical Guruji",
-    title: "Tech Education",
-    image: "https://yt3.googleusercontent.com/ytc/AIdro_lFLOYCCFOk3EgKdOiIJNEYOq8vQbdGzr6BG8vv=s176-c-k-c0x00ffffff-no-rj",
-    youtubeLink: "https://www.youtube.com/@TechnicalGuruji"
-  },
-  {
-    name: "BeerBiceps",
-    title: "Podcast & Lifestyle",
-    image: "https://yt3.googleusercontent.com/ytc/AIdro_l8S3YvbTLJ3RoYIf1LfF3XcQ-XbK5vOUC7YR0g=s176-c-k-c0x00ffffff-no-rj",
-    youtubeLink: "https://www.youtube.com/@BeerBiceps"
   }
 ];
 
@@ -90,17 +60,17 @@ const CreatorsCarousel = () => {
           >
             <CarouselContent className="flex items-center justify-center -ml-2 md:-ml-4">
               {creators.map((creator, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 flex justify-center">
-                  <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-[200px]">
-                    <div className="flex flex-col items-center p-3 md:p-4 hover:transform hover:scale-105 transition-all duration-300">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/1 md:basis-1/2 lg:basis-1/3 flex justify-center">
+                  <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-[280px]">
+                    <div className="flex flex-col items-center p-4 md:p-6 hover:transform hover:scale-105 transition-all duration-300">
                       <img 
                         src={creator.image} 
                         alt={creator.name} 
-                        className="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full mb-3 md:mb-4 border-4 border-white shadow-lg object-cover"
+                        className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mb-4 md:mb-6 border-4 border-white shadow-lg object-cover"
                       />
-                      <h3 className="font-medium text-center text-sm md:text-base leading-tight">{creator.name}</h3>
+                      <h3 className="font-medium text-center text-lg md:text-xl leading-tight">{creator.name}</h3>
                       {creator.title && (
-                        <p className="text-xs md:text-sm text-center opacity-80 mt-1 leading-tight">{creator.title}</p>
+                        <p className="text-sm md:text-base text-center opacity-80 mt-2 leading-tight">{creator.title}</p>
                       )}
                     </div>
                   </a>
@@ -108,8 +78,8 @@ const CreatorsCarousel = () => {
               ))}
             </CarouselContent>
             
-            <CarouselPrevious className="absolute -left-2 md:-left-3 lg:-left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 border-0 h-10 w-10 md:h-12 md:w-12 shadow-lg" />
-            <CarouselNext className="absolute -right-2 md:-right-3 lg:-right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 border-0 h-10 w-10 md:h-12 md:w-12 shadow-lg" />
+            <CarouselPrevious className="absolute -left-4 md:-left-6 lg:-left-8 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 border-0 h-12 w-12 md:h-14 md:w-14 shadow-lg" />
+            <CarouselNext className="absolute -right-4 md:-right-6 lg:-right-8 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 border-0 h-12 w-12 md:h-14 md:w-14 shadow-lg" />
           </Carousel>
         </div>
       </div>
