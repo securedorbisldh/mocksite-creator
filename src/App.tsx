@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import JoinUs from "./pages/JoinUs";
 import Contact from "./pages/Contact";
 import KloudBeanPartnership from "./pages/KloudBeanPartnership";
+import BusinessPartnerships from "./pages/BusinessPartnerships";
 import NotFound from "./pages/NotFound";
 import SitemapGenerator from "./components/SitemapGenerator";
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/kloudbean-partnership" element={<KloudBeanPartnership />} />
+          <Route path="/business-partnerships" element={<BusinessPartnerships />} />
           <Route path="/generate-sitemap" element={<SitemapGenerator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -42,6 +42,7 @@ const Navbar = () => {
           <Link to="/" className="text-gray-700 hover:text-red-600">Home</Link>
           <Link to="/about" className="text-gray-700 hover:text-red-600">About</Link>
           <Link to="/services" className="text-gray-700 hover:text-red-600">Services</Link>
+          <Link to="/business-partnerships" className="text-gray-700 hover:text-red-600">Partners</Link>
           <Link to="/join-us" className="text-gray-700 hover:text-red-600">Join us</Link>
           <Link to="/contact" className="px-6 py-2 bg-red-700 text-white rounded-full hover:bg-red-800 transition-colors">
             Get in touch!
@@ -78,6 +79,13 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
+                </Link>
+                <Link 
+                  to="/business-partnerships" 
+                  className="text-xl font-medium text-gray-700 hover:text-red-600 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Partners
                 </Link>
                 <Link 
                   to="/join-us" 

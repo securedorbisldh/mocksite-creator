@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 
 const SitemapGenerator = () => {
@@ -9,6 +8,7 @@ const SitemapGenerator = () => {
         { url: '', priority: '1.0', changefreq: 'weekly' },
         { url: '/about', priority: '0.8', changefreq: 'monthly' },
         { url: '/services', priority: '0.9', changefreq: 'weekly' },
+        { url: '/business-partnerships', priority: '0.9', changefreq: 'weekly' },
         { url: '/join-us', priority: '0.8', changefreq: 'monthly' },
         { url: '/contact', priority: '0.7', changefreq: 'monthly' },
         { url: '/kloudbean-partnership', priority: '0.8', changefreq: 'monthly' }
