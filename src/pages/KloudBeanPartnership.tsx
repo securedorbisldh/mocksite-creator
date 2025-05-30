@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { CheckCircle, Globe, Zap, Shield, TrendingUp, Users, Award, ArrowRight, Sparkles, Clock, Star, Crown, Briefcase } from "lucide-react";
+import { CheckCircle, Globe, Zap, Shield, TrendingUp, Users, Award, ArrowRight, Sparkles, Clock, Star, Crown } from "lucide-react";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 
@@ -19,20 +18,6 @@ const KloudBeanPartnership = () => {
       description: "Own a percentage of KloudBean's growth and future valuation",
       highlight: "Equity %",
       badge: "Ownership"
-    },
-    {
-      icon: Briefcase,
-      title: "Strategic Decision Making",
-      description: "Participate in key business decisions and product roadmap",
-      highlight: "Decision Power",
-      badge: "Leadership"
-    },
-    {
-      icon: Award,
-      title: "Revenue Sharing",
-      description: "Receive ongoing revenue share from platform growth",
-      highlight: "Revenue Share",
-      badge: "Passive Income"
     }
   ];
 
