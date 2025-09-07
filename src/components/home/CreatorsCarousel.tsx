@@ -25,37 +25,37 @@ const creators = [
   {
     name: "Creators Mela",
     title: "Creator Community",
-    image: "/lovable-uploads/877e765e-6330-49cb-bd93-ccb1642fe3b5.png",
-    youtubeLink: "#"
-  },
-  {
-    name: "Arjit Singh",
-    title: "Content Creator",
-    image: "/lovable-uploads/958f785c-a3dc-4b2f-81f7-610c6af2a83c.png",
-    youtubeLink: "#"
-  },
-  {
-    name: "Aditya Verma",
-    title: "Tech Creator",
-    image: "/lovable-uploads/104775a3-7977-4b15-8742-6956d08a56b5.png",
-    youtubeLink: "#"
-  },
-  {
-    name: "Twin Creators",
-    title: "Entertainment Duo",
-    image: "/lovable-uploads/6ba3c5a5-fe0d-4eac-be1a-f2d3651d3dd1.png",
-    youtubeLink: "#"
-  },
-  {
-    name: "Travel Creator",
-    title: "Adventure & Travel",
-    image: "/lovable-uploads/f396baf0-887e-405e-bd7b-2bdd0e0635b9.png",
+    image: "/lovable-uploads/decb96d3-5f29-49bc-98f2-f2294442cb00.png",
     youtubeLink: "#"
   },
   {
     name: "Tech Reviewer",
     title: "Technology Reviews",
-    image: "/lovable-uploads/aef16079-8347-4284-a9e2-e181240fb97c.png",
+    image: "/lovable-uploads/2604d8b8-03f1-4fd2-bd4c-9000136888bb.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Arjit Singh",
+    title: "Content Creator",
+    image: "/lovable-uploads/5bca64f7-05e7-47c9-9682-2b00723a9f9e.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Twin Creators",
+    title: "Entertainment Duo",
+    image: "/lovable-uploads/b98da153-380a-4ab2-ad56-6246bef2c1d6.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Travel Creator",
+    title: "Adventure & Travel",
+    image: "/lovable-uploads/620638f4-f3f1-494a-9f8e-cc309a4a10b6.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Aditya Verma",
+    title: "Tech Creator",
+    image: "/lovable-uploads/7432b36d-37a1-4092-a0a8-2831eb78827d.png",
     youtubeLink: "#"
   },
   {
