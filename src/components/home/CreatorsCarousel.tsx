@@ -21,6 +21,66 @@ const creators = [
     title: "Finance & Investment",
     image: "https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/C4OUR.png",
     youtubeLink: "https://www.youtube.com/@c4ourfin"
+  },
+  {
+    name: "Creator Profile",
+    title: "Content Creator",
+    image: "/lovable-uploads/70654483-8145-4ed2-932f-54ff9d54cab9.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Gaming Creator",
+    title: "Gaming Content",
+    image: "/lovable-uploads/bccf5b7c-6fef-43aa-9125-1aa6b4920f43.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Young Creator",
+    title: "Entertainment",
+    image: "/lovable-uploads/980d0d0d-f682-4200-bd71-984c00737176.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Baer",
+    title: "Entertainment Creator",
+    image: "/lovable-uploads/7780ccbb-2ecf-4ef4-8609-cbf5665f2b14.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Lifestyle Creator",
+    title: "Fashion & Lifestyle",
+    image: "/lovable-uploads/0d9f85b4-af66-474c-8759-c8cf117c30f2.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Tech Creator",
+    title: "Technology & Reviews",
+    image: "/lovable-uploads/2cb3f306-35d2-440b-9911-b7eb844c7e3b.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Rohan (Reconic)",
+    title: "Gaming & Entertainment",
+    image: "/lovable-uploads/230bc4b0-ca50-4844-a567-85c5bf3852b7.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Samrat Bhai",
+    title: "Entertainment & Comedy",
+    image: "/lovable-uploads/4b36451b-d3af-47fb-bc72-3ba08e0b7dd9.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "7 Rang Entertainers",
+    title: "Entertainment Group",
+    image: "/lovable-uploads/f7a83f53-19e8-4121-8a90-beb8feba71c5.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Vishnu Saha (Wandering Maniac)",
+    title: "Travel & Adventure",
+    image: "/lovable-uploads/9c8532d2-8769-4e39-85a8-986e486c374c.png",
+    youtubeLink: "#"
   }
 ];
 
