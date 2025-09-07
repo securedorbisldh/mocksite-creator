@@ -17,8 +17,8 @@ const HeroSection = () => {
         </div>
         <div className="relative order-1 md:order-2">
           <img 
-            src="https://pub-9b308ad05d60480db8a88c22b41487d1.r2.dev/creators.png" 
-            alt="Team" 
+            src="/lovable-uploads/ae5eff90-0eef-4ed5-9a7c-5fbc08ba64d4.png" 
+            alt="RightMediaBox Creative Team" 
             className="w-full rounded-2xl shadow-lg object-cover"
           />
         </div>
