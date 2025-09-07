@@ -23,21 +23,39 @@ const creators = [
     youtubeLink: "https://www.youtube.com/@c4ourfin"
   },
   {
-    name: "Creator Profile",
+    name: "Creators Mela",
+    title: "Creator Community",
+    image: "/lovable-uploads/877e765e-6330-49cb-bd93-ccb1642fe3b5.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Arjit Singh",
     title: "Content Creator",
-    image: "/lovable-uploads/70654483-8145-4ed2-932f-54ff9d54cab9.png",
+    image: "/lovable-uploads/958f785c-a3dc-4b2f-81f7-610c6af2a83c.png",
     youtubeLink: "#"
   },
   {
-    name: "Gaming Creator",
-    title: "Gaming Content",
-    image: "/lovable-uploads/bccf5b7c-6fef-43aa-9125-1aa6b4920f43.png",
+    name: "Aditya Verma",
+    title: "Tech Creator",
+    image: "/lovable-uploads/104775a3-7977-4b15-8742-6956d08a56b5.png",
     youtubeLink: "#"
   },
   {
-    name: "Young Creator",
-    title: "Entertainment",
-    image: "/lovable-uploads/980d0d0d-f682-4200-bd71-984c00737176.png",
+    name: "Twin Creators",
+    title: "Entertainment Duo",
+    image: "/lovable-uploads/6ba3c5a5-fe0d-4eac-be1a-f2d3651d3dd1.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Travel Creator",
+    title: "Adventure & Travel",
+    image: "/lovable-uploads/f396baf0-887e-405e-bd7b-2bdd0e0635b9.png",
+    youtubeLink: "#"
+  },
+  {
+    name: "Tech Reviewer",
+    title: "Technology Reviews",
+    image: "/lovable-uploads/aef16079-8347-4284-a9e2-e181240fb97c.png",
     youtubeLink: "#"
   },
   {
@@ -92,10 +110,10 @@ const CreatorsCarousel = () => {
       return;
     }
 
-    // Auto-play functionality
+    // Auto-play functionality - slower timing
     const autoplay = setInterval(() => {
       api.scrollNext();
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(autoplay);
   }, [api]);
@@ -109,12 +127,14 @@ const CreatorsCarousel = () => {
         </div>
         
         <div className="relative max-w-6xl mx-auto">
-          <Carousel 
+            <Carousel 
             setApi={setApi}
             opts={{
-              align: "center",
+              align: "start",
               loop: true,
               slidesToScroll: 1,
+              skipSnaps: false,
+              dragFree: false,
             }}
             className="w-full"
           >
@@ -123,11 +143,13 @@ const CreatorsCarousel = () => {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/1 md:basis-1/2 lg:basis-1/3 flex justify-center">
                   <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-[280px]">
                     <div className="flex flex-col items-center p-4 md:p-6 hover:transform hover:scale-105 transition-all duration-300">
-                      <img 
-                        src={creator.image} 
-                        alt={creator.name} 
-                        className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mb-4 md:mb-6 border-4 border-white shadow-lg object-cover"
-                      />
+                      <div className="relative">
+                        <img 
+                          src={creator.image} 
+                          alt={creator.name} 
+                          className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mb-4 md:mb-6 border-4 border-white shadow-lg object-cover object-center"
+                        />
+                      </div>
                       <h3 className="font-medium text-center text-lg md:text-xl leading-tight">{creator.name}</h3>
                       {creator.title && (
                         <p className="text-sm md:text-base text-center opacity-80 mt-2 leading-tight">{creator.title}</p>
