@@ -1,10 +1,9 @@
-
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import { useState } from "react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useToast } from "@/hooks/use-toast";
-
+import { supabase } from "@/integrations/supabase/client";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -31,79 +30,31 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus({ type: null, message: "" });
-    
-    console.log("Starting form submission...");
 
     try {
-      console.log("Sending request to Brevo API...");
-      
-      const requestBody = {
-        sender: {
-          name: "Right Box Media",
-          email: "lagan@rightboxmedia.com" // Updated sender email
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          channelLink: formData.channelLink,
+          query: formData.query,
         },
-        to: [
-          {
-            email: "laganvyas66@gmail.com",
-            name: "Lagan Vyas"
-          }
-        ],
-        cc: [
-          {
-            email: "info@rightmediabox.com",
-            name: "Right Media Box Info"
-          }
-        ],
-        subject: "New Contact Form Submission",
-        htmlContent: `
-          <h1>New Contact Form Submission</h1>
-          <p><strong>Name:</strong> ${formData.name}</p>
-          <p><strong>Email:</strong> ${formData.email}</p>
-          <p><strong>Channel Link:</strong> ${formData.channelLink}</p>
-          <p><strong>Query:</strong> ${formData.query}</p>
-        `
-      };
-      
-      console.log("Request body:", JSON.stringify(requestBody));
-      
-      const response = await fetch("https://api.brevo.com/v3/smtp/email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "api-key": "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",
-        },
-        body: JSON.stringify(requestBody)
       });
 
-      console.log("API Response Status:", response.status);
-      
-      const responseData = await response.json().catch(() => ({}));
-      console.log("API Response Data:", responseData);
+      if (error) throw error;
 
-      if (response.ok) {
-        console.log("Email sent successfully!");
-        toast({
-          title: "Form submitted successfully",
-          description: "We will get back to you soon!",
-          duration: 5000,
-        });
-        setFormStatus({
-          type: "success",
-          message: "Form submitted successfully. We'll get back to you soon! MessageId: " + 
-                   (responseData.messageId || "Unknown")
-        });
-        // Clear form after successful submission
-        setFormData({
-          name: "",
-          email: "",
-          channelLink: "",
-          query: ""
-        });
-      } else {
-        const errorMessage = responseData.message || "Unknown error occurred";
-        console.error("API Error:", errorMessage);
-        throw new Error(errorMessage);
-      }
+      toast({
+        title: "Form submitted successfully",
+        description: "We will get back to you soon!",
+        duration: 5000,
+      });
+
+      setFormStatus({
+        type: "success",
+        message: "Thanks! Your message has been sent.",
+      });
+
+      setFormData({ name: "", email: "", channelLink: "", query: "" });
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
@@ -114,7 +65,7 @@ const Contact = () => {
       });
       setFormStatus({
         type: "error",
-        message: `Failed to submit the form: ${error instanceof Error ? error.message : "Unknown error"}`
+        message: `Failed to submit the form: ${error instanceof Error ? error.message : "Unknown error"}`,
       });
     } finally {
       setIsSubmitting(false);
