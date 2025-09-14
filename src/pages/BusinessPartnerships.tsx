@@ -102,7 +102,7 @@ const BusinessPartnerships = () => {
               <Sparkles className="w-4 h-4" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-              Partner with <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">RightMediaBox</span>
+              Partner with <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">RightBoxMedia</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl mx-auto">
               Join our strategic partnership ecosystem and connect with top content creators worldwide. We offer diverse collaboration models beyond equity sharing to drive mutual growth.

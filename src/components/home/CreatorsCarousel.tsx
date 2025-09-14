@@ -104,19 +104,29 @@ const creators = [
 
 const CreatorsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    if (!api) {
+    if (!api || isHovered) {
       return;
     }
 
-    // Auto-play functionality - slower timing
     const autoplay = setInterval(() => {
       api.scrollNext();
-    }, 5000);
+    }, 7000);
 
-    return () => clearInterval(autoplay);
-  }, [api]);
+    const handleVisibility = () => {
+      if (document.visibilityState === "hidden") {
+        clearInterval(autoplay);
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      clearInterval(autoplay);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [api, isHovered]);
 
   return (
     <div className="py-8 md:py-12 bg-gradient-to-r from-red-700 to-red-600 text-white">
@@ -126,7 +136,7 @@ const CreatorsCarousel = () => {
           <p className="text-red-100 text-sm md:text-base">Trusted by top content creators worldwide</p>
         </div>
         
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-6xl mx-auto" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <Carousel 
             setApi={setApi}
             opts={{
@@ -135,6 +145,7 @@ const CreatorsCarousel = () => {
               slidesToScroll: 1,
               skipSnaps: false,
               dragFree: false,
+              containScroll: "trimSnaps",
             }}
             className="w-full"
           >
@@ -147,7 +158,7 @@ const CreatorsCarousel = () => {
                         <img 
                           src={creator.image} 
                           alt={creator.name} 
-                          className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mb-4 md:mb-6 border-4 border-white shadow-lg object-cover object-center"
+                          className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full mb-4 md:mb-6 border-2 border-white/90 shadow-lg object-cover object-center"
                         />
                       </div>
                       <h3 className="font-medium text-center text-lg md:text-xl leading-tight">{creator.name}</h3>

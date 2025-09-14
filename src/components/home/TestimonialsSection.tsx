@@ -1,34 +1,40 @@
+import creatorsMela from "@/assets/creators-mela.jpg";
+import samratBhai from "@/assets/samrat-bhai.jpg";
+import vishnuSaha from "@/assets/vishnu-saha.jpg";
+import rohanReconic from "@/assets/rohan-reconic.jpg";
+import badalThakur from "@/assets/badal-thakur.jpg";
+import veerChaudhary from "@/assets/veer-chaudhary.jpg";
 
 const testimonials = [
   {
     name: "Creators Mela",
     quote: "At Creators Mela, we work with some of the top creators in India, and quality content is non-negotiable for us. RightBox Media has been an incredible post-production partner, consistently delivering edits that match our creators' brand, style, and audience expectations. Their team is fast, flexible, and detail-oriented, making the entire process seamless.",
-    image: "/src/assets/creators-mela.jpg"
+    image: creatorsMela
   },
   {
     name: "Samrat Bhai",
     quote: "For my videos, every frame and every detail matters — and RightBox Media gets that perfectly. Their post-production work adds sharpness, clarity, and the right pacing to keep my audience hooked. They understand the sensitivity and impact of my content, and they handle it with precision and professionalism.",
-    image: "/src/assets/samrat-bhai.jpg"
+    image: samratBhai
   },
   {
     name: "Vishnu Saha (Wandering Maniac)",
     quote: "As someone who has travelled to over 65 countries, I need my travel vlogs to capture the beauty, culture, and emotions of every place I visit. RightBox Media brings my journeys to life with stunning edits, smooth storytelling, and a cinematic touch that keeps my audience engaged.",
-    image: "/src/assets/vishnu-saha.jpg"
+    image: vishnuSaha
   },
   {
     name: "Rohan (Reconic)",
     quote: "I really enjoyed working with you For my short form content I didn't even have to think twice about improvements everything was fine It also reduced my workload to a great extent which made the whole experience even better On top of that the results have been amazing Thanks a lot",
-    image: "/src/assets/rohan-reconic.jpg"
+    image: rohanReconic
   },
   {
     name: "Badal Thakur",
     quote: "I've been really impressed with your editing skills! The way you bring life to the footage with smooth transitions, perfect timing, and attention to detail shows how dedicated and talented you are. You truly understand the vibe of the content and make it more engaging and professional.",
-    image: "/src/assets/badal-thakur.jpg"
+    image: badalThakur
   },
   {
     name: "Veer Chaudhary",
     quote: "Working with RightBox Media has been an absolute game-changer for my informative videos. Their post-production work is top-notch — from precise edits to clean sound design and smooth transitions, everything is handled with professionalism and creativity. They understand my vision and consistently deliver content that not only meets but exceeds expectations.",
-    image: "/src/assets/veer-chaudhary.jpg"
+    image: veerChaudhary
   }
 ];
 
