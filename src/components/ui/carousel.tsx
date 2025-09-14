@@ -17,6 +17,7 @@ type CarouselProps = {
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
+  disableDrag?: boolean
 }
 
 type CarouselContextProps = {
@@ -130,6 +131,7 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          disableDrag: (props as CarouselProps).disableDrag,
         }}
       >
         <div
@@ -152,10 +154,10 @@ const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
+  const { carouselRef, orientation, disableDrag } = useCarousel()
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div ref={carouselRef} className={cn("overflow-hidden", disableDrag && "pointer-events-none") }>
       <div
         ref={ref}
         className={cn(

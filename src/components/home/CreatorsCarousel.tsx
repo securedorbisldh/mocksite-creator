@@ -1,6 +1,6 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { type CarouselApi } from "@/components/ui/carousel";
 
 const creators = [
@@ -104,7 +104,6 @@ const creators = [
 
 const CreatorsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
-  const [isHovered, setIsHovered] = useState(false);
 
   // Auto-scroll disabled - only manual navigation
 
@@ -116,9 +115,10 @@ const CreatorsCarousel = () => {
           <p className="text-red-100 text-sm md:text-base">Trusted by top content creators worldwide</p>
         </div>
         
-        <div className="relative max-w-6xl mx-auto" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className="relative max-w-6xl mx-auto">
             <Carousel 
             setApi={setApi}
+            disableDrag
             opts={{
               align: "start",
               loop: true,
@@ -132,7 +132,7 @@ const CreatorsCarousel = () => {
             <CarouselContent className="flex items-center justify-center -ml-2 md:-ml-4">
               {creators.map((creator, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/1 md:basis-1/2 lg:basis-1/3 flex justify-center">
-                  <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-[280px]">
+                  <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-[360px]">
                     <div className="flex flex-col items-center p-4 md:p-6 hover:transform hover:scale-105 transition-all duration-300">
                       <div className="relative">
                          <img 
