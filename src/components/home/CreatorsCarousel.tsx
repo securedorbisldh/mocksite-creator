@@ -106,27 +106,7 @@ const CreatorsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [isHovered, setIsHovered] = useState(false);
 
-  useEffect(() => {
-    if (!api || isHovered) {
-      return;
-    }
-
-    const autoplay = setInterval(() => {
-      api.scrollNext();
-    }, 7000);
-
-    const handleVisibility = () => {
-      if (document.visibilityState === "hidden") {
-        clearInterval(autoplay);
-      }
-    };
-    document.addEventListener("visibilitychange", handleVisibility);
-
-    return () => {
-      clearInterval(autoplay);
-      document.removeEventListener("visibilitychange", handleVisibility);
-    };
-  }, [api, isHovered]);
+  // Auto-scroll disabled - only manual navigation
 
   return (
     <div className="py-8 md:py-12 bg-gradient-to-r from-red-700 to-red-600 text-white">
@@ -155,11 +135,11 @@ const CreatorsCarousel = () => {
                   <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="w-full max-w-[280px]">
                     <div className="flex flex-col items-center p-4 md:p-6 hover:transform hover:scale-105 transition-all duration-300">
                       <div className="relative">
-                        <img 
-                          src={creator.image} 
-                          alt={creator.name} 
-                          className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full mb-4 md:mb-6 border-2 border-white/90 shadow-lg object-cover object-center"
-                        />
+                         <img 
+                           src={creator.image} 
+                           alt={creator.name} 
+                           className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full mb-4 md:mb-6 shadow-lg object-cover object-center"
+                         />
                       </div>
                       <h3 className="font-medium text-center text-lg md:text-xl leading-tight">{creator.name}</h3>
                       {creator.title && (
