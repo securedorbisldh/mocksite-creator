@@ -142,11 +142,11 @@ const CreatorsCarousel = () => {
                 >
                   <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="block w-full">
                     {/* Image wrapper: circular, uniform size, no border */}
-                    <div className="w-full aspect-square rounded-full overflow-hidden shadow-lg mx-auto max-w-[200px]">
+                    <div className="mx-auto size-40 md:size-48 rounded-full overflow-hidden bg-background">
                       <img
                         src={creator.image}
                         alt={`${creator.name} - ${creator.title}`}
-                        className="h-full w-full object-cover object-center"
+                        className="h-full w-full object-cover object-center transform scale-110 md:scale-125"
                         loading="lazy"
                       />
                     </div>
