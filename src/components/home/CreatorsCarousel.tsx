@@ -141,8 +141,8 @@ const CreatorsCarousel = () => {
                   aria-label={`${creator.name} – ${creator.title}`}
                 >
                   <a href={creator.youtubeLink} target="_blank" rel="noopener noreferrer" className="block w-full">
-                    {/* Image wrapper: big, borderless, no ring */}
-                    <div className="w-full aspect-square rounded-xl overflow-hidden shadow-lg">
+                    {/* Image wrapper: circular, uniform size, no border */}
+                    <div className="w-full aspect-square rounded-full overflow-hidden shadow-lg mx-auto max-w-[200px]">
                       <img
                         src={creator.image}
                         alt={`${creator.name} - ${creator.title}`}
