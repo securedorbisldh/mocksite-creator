@@ -97,8 +97,8 @@ const Contact = () => {
               <p>Mon - Sat</p>
             </div>
             
-            <a href="mailto:lagan@rightboxmedia.com" className="text-red-600 hover:underline block mb-4">
-              lagan@rightboxmedia.com
+            <a href="mailto:info@rightboxmedia.com" className="text-red-600 hover:underline block mb-4">
+              info@rightboxmedia.com
             </a>
             <p className="mt-4 text-gray-600 font-medium text-red-600">Trusted by global creators.</p>
           </div>
