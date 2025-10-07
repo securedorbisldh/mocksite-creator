@@ -56,7 +56,7 @@ const Contact = () => {
 
       setFormData({ name: "", email: "", channelLink: "", query: "" });
     } catch (error) {
-      console.error("Form submission error:", error);
+      // Generic user-facing error message (no internal details exposed)
       toast({
         title: "Error",
         description: "Failed to submit the form. Please try again later.",
@@ -65,7 +65,7 @@ const Contact = () => {
       });
       setFormStatus({
         type: "error",
-        message: `Failed to submit the form: ${error instanceof Error ? error.message : "Unknown error"}`,
+        message: "Unable to send message. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
