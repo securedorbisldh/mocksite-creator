@@ -5,80 +5,48 @@ import { X } from "lucide-react";
 
 const videos = [
   {
-    id: "hajb3zCMJm4",
+    id: "0eLp9Gw-bgs",
     title: "Video 1"
   },
   {
-    id: "dj1TUxhoW1U",
+    id: "swbPjeOm0fQ",
     title: "Video 2"
   },
   {
-    id: "Ct76q0Jcte8",
+    id: "NerppTNn_5s",
     title: "Video 3"
   },
   {
-    id: "zeUrgaZMoS0",
+    id: "TcOM230TWEw",
     title: "Video 4"
   },
   {
-    id: "Udsd_8urN4I",
+    id: "A9lBfKT1KXA",
     title: "Video 5"
   },
   {
-    id: "wDgyDvOKnqM",
+    id: "NaKtTQNV0uc",
     title: "Video 6"
   },
   {
-    id: "kIoya_764fk",
+    id: "F2kTCMd5fp0",
     title: "Video 7"
   },
   {
-    id: "mA2yoUKqrqY",
+    id: "8g5sChJ2058",
     title: "Video 8"
   },
   {
-    id: "0eLp9Gw-bgs",
+    id: "x05vDR5xIj8",
     title: "Video 9"
   },
   {
-    id: "swbPjeOm0fQ",
+    id: "YyFxnGspK14",
     title: "Video 10"
   },
   {
-    id: "NerppTNn_5s",
-    title: "Video 11"
-  },
-  {
-    id: "TcOM230TWEw",
-    title: "Video 12"
-  },
-  {
-    id: "A9lBfKT1KXA",
-    title: "Video 13"
-  },
-  {
-    id: "NaKtTQNV0uc",
-    title: "Video 14"
-  },
-  {
-    id: "F2kTCMd5fp0",
-    title: "Video 15"
-  },
-  {
-    id: "8g5sChJ2058",
-    title: "Video 16"
-  },
-  {
-    id: "x05vDR5xIj8",
-    title: "Video 17"
-  },
-  {
-    id: "YyFxnGspK14",
-    title: "Video 18"
-  },
-  {
     id: "qd5KiTV7RcQ",
-    title: "Video 19"
+    title: "Video 11"
   }
 ];
 
